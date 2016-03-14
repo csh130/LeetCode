@@ -9,8 +9,8 @@ package BitMunipulation;
  * */
 public class ReverseBits {
 	public int reverseBits(int n) {
-		int result=0;
-		
+		int result = 0;
+		return 0;
 
 	}
 }

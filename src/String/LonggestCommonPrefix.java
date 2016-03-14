@@ -12,15 +12,15 @@ public class LonggestCommonPrefix {
 		for (int j = 0; j < strs[0].length(); j++) {
 			char c = strs[0].charAt(j);
 			for (int i = 0; i < strs.length; i++) {
-				// 不等于c 或者长度不相等  直接返回string
+				// 不等于c 或者长度不相等 直接返回string
 				if (strs[i].length() - 1 < j || strs[i].charAt(j) != c)
 					return s;
 			}
 			s += c;
 		}
-		StringBuilder s=new StringBuilder();
-		s.reverse().to
-		
+		StringBuilder s1 = new StringBuilder();
+		// s.reverse().to
+
 		return s;
 	}
 }

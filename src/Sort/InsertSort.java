@@ -18,10 +18,11 @@ public class InsertSort {
 				if (arr[j] > temp) {
 					arr[j + 1] = arr[j];
 				} else {
+					arr[j + 1] = temp;
 					break;
 				}
 			}
-			arr[j + 1] = temp;
+			
 		}
 		return arr;
 	}

@@ -1,7 +1,6 @@
 package LinkedList;
 
 public class ListNode {
-
 	int val;
 	ListNode next;
 
@@ -9,9 +8,13 @@ public class ListNode {
 		val = x;
 	}
 
-	@Override
 	public String toString() {
-		return "->" + val;
-
+		ListNode temp = this;
+		String str = "";
+		while (temp != null) {
+			str += " " + temp.val;
+			temp = temp.next;
+		}
+		return str;
 	}
 }

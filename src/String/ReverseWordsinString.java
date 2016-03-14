@@ -17,9 +17,4 @@ public class ReverseWordsinString {
 		return b.trim();
 	}
 
-	public String reverseWords2(String s) {
-		String[] words = s.trim().split(" +");
-		Collections.reverse(Arrays.asList(words));
-		return String.join(" ", words);
-	}
 }

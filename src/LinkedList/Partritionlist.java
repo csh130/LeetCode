@@ -13,13 +13,11 @@ package LinkedList;
  * */
 public class Partritionlist {
 
-}
+	/**
+	 * Definition for singly-linked list. public class ListNode { int val;
+	 * ListNode next; ListNode(int x) { val = x; } }
+	 */
 
-/**
- * Definition for singly-linked list. public class ListNode { int val; ListNode
- * next; ListNode(int x) { val = x; } }
- */
-class Solution {
 	public ListNode partition(ListNode head, int x) {
 		ListNode head1 = new ListNode(0);
 		ListNode head2 = new ListNode(0);

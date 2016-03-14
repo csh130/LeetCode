@@ -2,7 +2,7 @@ package String;
 
 public class LongestPalindromicString {
 	public static void main(String[] args) {
-		System.out.println();
+		System.out.println(isValid("avccva"));
 	}
 
 	public String longestPalindrome(String s) {
@@ -36,9 +36,7 @@ public class LongestPalindromicString {
 	}
 
 	public static boolean isValid(String s) {
-		int i = 0, j = s.length();
-		while (i <= j) {
-		}
-		return false;
+		StringBuilder sb= new StringBuilder(s);
+		return sb.reverse().toString().equals(s);
 	}
 }
