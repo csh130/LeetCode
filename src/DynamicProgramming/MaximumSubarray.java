@@ -26,4 +26,15 @@ public class MaximumSubarray {
 		return max;
 	}
 
+	// My solution
+	public int maxSubArray2(int[] nums) {
+		int cur = 0, max = Integer.MIN_VALUE;
+		for (int i = 0; i < nums.length; i++) {
+			// more efficient way
+			cur = nums[i] < cur + nums[i] ? cur + nums[i] : nums[i];
+			max = Math.max(cur, max);
+		}
+		return nums.length == 0 ? 0 : max;
+	}
+
 }

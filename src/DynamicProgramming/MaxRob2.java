@@ -4,8 +4,13 @@ public class MaxRob2 {
 	public static void main(String[] args) {
 		// System.out.println(rob(new int[] { 2, 7, 9, 3, 1 }));
 
-		betterSolution b = new betterSolution();
-		System.out.println(b.rob(new int[] { 1, 1, 1 }));
+		Integer f1 = 100, f2 = 100, f3 = 150, f4 = 150;
+
+		System.out.println(f1 == f2);
+		System.out.println(f3 == f4);
+
+		// betterSolution b = new betterSolution();
+		// System.out.println(b.rob(new int[] { 1, 1, 1 }));
 	}
 
 	public static int rob(int[] nums) {

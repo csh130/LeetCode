@@ -3,7 +3,7 @@ package BinarySearch;
 public class SearchARange {
 	public static void main(String[] args) {
 		SearchARange s = new SearchARange();
-		int[] r = s.searchRange2(new int[] { 1, 2, 3, 3, 4, 4, 4, 4, 5, 6 }, 7);
+		int[] r = s.searchRange3(new int[] { 1, 2, 3, 3, 4, 4, 4, 4, 5, 6 }, 4);
 
 		System.out.println(r[0] + "," + r[1]);
 	}
@@ -65,6 +65,28 @@ public class SearchARange {
 		}
 		result[1] = start - 1;
 
+		return result;
+	}
+
+	public static int[] searchRange3(int[] nums, int target) {
+		int[] result = new int[2];
+		if (nums[0] > target || nums[nums.length - 1] < target
+				|| nums.length == 0) {
+			return new int[] { -1, -1 };
+		}
+		int left = 0, right = nums.length - 1;
+		while (left <= right) {
+			int mid = left + (right - left) / 2;
+			if (nums[mid] < target) {
+				left = mid + 1;
+			} else if (nums[mid] > target) {
+				right = mid - 1;
+			}else{
+				
+			}
+		}
+		result[0] = left;
+		result[1] = right;
 		return result;
 	}
 }

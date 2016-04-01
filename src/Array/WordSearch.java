@@ -2,6 +2,7 @@ package Array;
 
 import java.awt.Point;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import javax.swing.text.AbstractDocument.LeafElement;
 
@@ -46,17 +47,17 @@ public class WordSearch {
 	}
 
 	public boolean check(char[][] board, int row, int col, char[] c, int i) {
-		// 如果要找的 word 到 length 长度的 char 了 说明已经找完了
+		//  如果要找的 word 到 length 长度的 char 了 说明已经找完了
 		if (i == c.length)
 			return true;
 
-		//如果超出范围 就返回 false 或者当前字符不等于 char[i]
+		// 如果超出范围 就返回 false 或者当前字符不等于 char[i]
 		if (row < 0 || col < 0 || row >= board.length || col >= board[0].length
 				|| visited[row][col] || c[i] != board[row][col])
 			return false;
 
 		visited[row][col] = true;
-		//此处用递归 检查下一个 char 
+		// 此处用递归 检查下一个 char
 		if (check(board, row + 1, col, c, i + 1)
 				|| check(board, row, col + 1, c, i + 1)
 				|| check(board, row - 1, col, c, i + 1)

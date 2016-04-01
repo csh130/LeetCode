@@ -7,7 +7,6 @@ public class AddDigits {
 
 	public static int addDigits(int num) {
 		int sum = 0;
-
 		char[] arr = String.valueOf(num).toCharArray();
 		for (char c : arr) {
 			sum += Integer.parseInt(c + "");
@@ -19,5 +18,10 @@ public class AddDigits {
 		} else
 
 			return sum;
+	}
+
+	// prove in the wiki
+	public int addDigits2(int num) {
+		return (num - 1) % 9 + 1;
 	}
 }

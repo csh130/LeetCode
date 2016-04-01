@@ -1,14 +1,14 @@
 package Array;
+
 /**
- * Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.
-
-click to show follow up.
-
-Follow up:
-Did you use extra space?
-A straight forward solution using O(mn) space is probably a bad idea.
-A simple improvement uses O(m + n) space, but still not the best solution.
-Could you devise a constant space solution?
+ * Given a m x n matrix, if an element is 0, set its entire row and column to 0.
+ * Do it in place.
+ * 
+ * click to show follow up.
+ * 
+ * Follow up: Did you use extra space? A straight forward solution using O(mn)
+ * space is probably a bad idea. A simple improvement uses O(m + n) space, but
+ * still not the best solution. Could you devise a constant space solution?
  * */
 public class SetMatrixZero {
 	public static void main(String[] args) {
@@ -19,7 +19,8 @@ public class SetMatrixZero {
 		// first check null cases;
 		if (matrix == null || matrix.length == 0 || matrix[0].length == 0)
 			return;
-		// flag for the first row, we store the 0 which means that row or colum should be set to 0
+		// flag for the first row, we store the 0 which means that row or colum
+		// should be set to 0
 		// otherwise, we have to use extra space for the set as 0
 		boolean frow = false, fcol = false;
 		int m = matrix.length;
@@ -46,7 +47,8 @@ public class SetMatrixZero {
 			}
 		}
 
-		// Start from 1, be careful with here!
+		// Start from 1, be careful with here! If start from 0, will not get the
+		// correct answer!
 		for (int i = 1; i < n; i++) {
 			if (matrix[0][i] == 0) {
 				for (int j = 1; j < m; j++) {
